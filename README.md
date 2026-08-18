@@ -48,63 +48,63 @@ your saved settings are copied over automatically on first launch.
 
 ## Features
 
-- **Download tab** — paste a track, playlist, or profile link and fetch it.
+- **Download tab** - paste a track, playlist, or profile link and fetch it.
   A profile link pulls in that account's public uploads.
-- **Search tab** — search SoundCloud by keyword instead of pasting a link.
-- **Recent links** — a dropdown of your last few fetched links.
-- **Clipboard detection** — if a SoundCloud link is on your clipboard, a
+- **Search tab** - search SoundCloud by keyword instead of pasting a link.
+- **Recent links** - a dropdown of your last few fetched links.
+- **Clipboard detection** - if a SoundCloud link is on your clipboard, a
   clickable hint appears so you can drop it into the URL field in one click.
-- **Bulk or individual downloads** — download selected tracks straight into
+- **Bulk or individual downloads** - download selected tracks straight into
   a folder, or bundle them into a ZIP you choose the location for.
-- **Concurrent downloads** — download several tracks at once (adjustable in
+- **Concurrent downloads** - download several tracks at once (adjustable in
   Settings) instead of one at a time.
-- **Cancel mid-download** — stop a batch partway through.
-- **Retry failed** — after a batch finishes, retry just the tracks that
+- **Cancel mid-download** - stop a batch partway through.
+- **Retry failed** - after a batch finishes, retry just the tracks that
   failed instead of starting over.
-- **Skip existing files** — won't re-download a track that's already in the
+- **Skip existing files** - won't re-download a track that's already in the
   destination folder (can be turned off in Settings).
-- **Cover art and tags** — every MP3 is saved with title/artist/album ID3
+- **Cover art and tags** - every MP3 is saved with title/artist/album ID3
   tags and embedded cover art automatically. Optionally also save the cover
   art as a separate .jpg file.
-- **Per-artist subfolders** — optionally organize bulk downloads into a
+- **Per-artist subfolders** - optionally organize bulk downloads into a
   folder per artist.
-- **Custom filename pattern** — control how files are named using
+- **Custom filename pattern** - control how files are named using
   `{artist}`, `{title}`, `{album}`, and `{track_no}`.
-- **Download log** — optionally write a `download_log.csv` recording what
+- **Download log** - optionally write a `download_log.csv` recording what
   was downloaded, skipped, or failed, and when.
-- **Faster startup** — the SoundCloud client id is cached to disk after the
+- **Faster startup** - the SoundCloud client id is cached to disk after the
   first successful fetch, so later launches don't need to re-scrape it.
-- **Manual client id override** — if auto-detection ever fails, you can
+- **Manual client id override** - if auto-detection ever fails, you can
   paste in a known-good client id and test the connection from Settings.
-- **Light theme picker** — choose between several clean, light ttkbootstrap
+- **Light theme picker** - choose between several clean, light ttkbootstrap
   themes.
-- **Window size memory** — the app reopens at the size and position you
+- **Window size memory** - the app reopens at the size and position you
   left it at.
 
 ## Privacy and security
 
-- **No telemetry** — this app never sends anything anywhere except
+- **No telemetry** - this app never sends anything anywhere except
   SoundCloud's own public API. No analytics, no crash reporting, nothing
   sent to the developer or anyone else.
-- **Proxy support** — you can set an HTTP/HTTPS proxy URL in Settings and
+- **Proxy support** - you can set an HTTP/HTTPS proxy URL in Settings and
   every request the app makes will route through it. This is meant to let
-  you use a VPN, proxy, or local Tor bridge you already run and trust — the
+  you use a VPN, proxy, or local Tor bridge you already run and trust - the
   app itself has no built-in anonymization and doesn't claim to hide your
   network identity on its own.
-- **Randomized browser identity** — optionally has the app present as a
+- **Randomized browser identity** - optionally has the app present as a
   randomly chosen common browser on each launch, rather than always
   identifying itself the same way.
-- **Request pacing** — optionally adds a small random delay between
+- **Request pacing** - optionally adds a small random delay between
   download requests, mainly to avoid tripping SoundCloud's bot detection
   during large batches.
-- **Local data lockdown** — the settings file (which stores things like
+- **Local data lockdown** - the settings file (which stores things like
   your recent links and download folder) is saved with owner-only
   permissions on Linux/macOS.
-- **Clear all saved data** — a button in Settings wipes your saved
+- **Clear all saved data** - a button in Settings wipes your saved
   settings, cached client id, and recent links in one click.
-- **Clear recent links on exit** — an optional toggle to not keep a link
+- **Clear recent links on exit** - an optional toggle to not keep a link
   history between sessions at all.
-- **Secure temp handling** — when building a ZIP, tracks are staged in a
+- **Secure temp handling** - when building a ZIP, tracks are staged in a
   private, owner-only-permission system temp directory rather than a named
   folder next to your chosen ZIP location, and that temp directory is
   cleaned up afterward.
@@ -113,8 +113,8 @@ your saved settings are copied over automatically on first launch.
 
 - Paste a link (or use Search) and click Fetch / Search.
 - Check the tracks you want, then either:
-  - **Download selected** — pick a folder, each track saves as an MP3.
-  - **Download selected as ZIP** — pick where the ZIP file is saved, all
+  - **Download selected** - pick a folder, each track saves as an MP3.
+  - **Download selected as ZIP** - pick where the ZIP file is saved, all
     selected tracks are bundled into it.
 - Each row shows its live status (downloading / done / failed / skipped)
   during a batch.
@@ -127,7 +127,7 @@ your saved settings are copied over automatically on first launch.
   fetching or downloading until this app is updated.
 - Very large profiles or playlists can take a while to fetch and download.
 - Raising "Simultaneous downloads" too high in Settings may get you
-  temporarily rate-limited by SoundCloud — 2-3 is a reasonable default.
+  temporarily rate-limited by SoundCloud - 2-3 is a reasonable default.
 - Turning on request pacing will slow down large batches somewhat, since it
   intentionally adds delay between requests.
 
