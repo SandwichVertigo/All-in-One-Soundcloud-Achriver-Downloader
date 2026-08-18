@@ -24,13 +24,17 @@ responsible for how you use this software. It is provided as-is, with no
 warranty, and the author is not liable for any misuse or consequences of
 using it.
 
+## Screenshots
+
+![Download Page](Screenshots/2.png)
+![Search tab](Screenshots/3.png)
+![Settings tab](Screenshots/1.png)
+
 ## Setup
 
 1. Install Python 3.10 or newer.
 2. Install FFmpeg and make sure it is on your system PATH (needed to save
-   tracks as MP3). On Windows, download a build from ffmpeg.org and add its
-   `bin` folder to PATH. On macOS, `brew install ffmpeg`. On Linux,
-   install the `ffmpeg` package from your distro's package manager.
+   tracks as MP3). See the distro-specific instructions below.
 3. Install the Python dependencies:
 
    ```
@@ -45,6 +49,96 @@ using it.
 
 If you previously used this app under its old name ("SoundCloud Grabber"),
 your saved settings are copied over automatically on first launch.
+
+### Ubuntu / Debian / Linux Mint / Pop!_OS
+
+```bash
+sudo apt update
+sudo apt install python3 python3-pip python3-venv python3-tk ffmpeg
+cd AllInOneSoundCloudArchiver
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+### Fedora / Nobara
+
+```bash
+sudo dnf install python3 python3-pip python3-tkinter ffmpeg
+cd AllInOneSoundCloudArchiver
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+FFmpeg may need the RPM Fusion repository enabled first if it's not already
+available: https://rpmfusion.org/Configuration
+
+### Arch Linux / Manjaro / EndeavourOS
+
+```bash
+sudo pacman -S python python-pip tk ffmpeg
+cd AllInOneSoundCloudArchiver
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+### openSUSE
+
+```bash
+sudo zypper install python3 python3-pip python3-tk ffmpeg
+cd AllInOneSoundCloudArchiver
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+### Any other Linux distro
+
+The dependencies you need from your package manager are: Python 3.10+,
+pip, the Tk/Tkinter bindings for Python (sometimes a separate package from
+Python itself), and FFmpeg. Once those are installed, the venv and pip
+steps above are the same everywhere:
+
+```bash
+cd AllInOneSoundCloudArchiver
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+### macOS
+
+```bash
+brew install python ffmpeg
+cd AllInOneSoundCloudArchiver
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+### Windows
+
+1. Install Python from python.org (check "Add python.exe to PATH" during
+   install - Tkinter is included by default on Windows).
+2. Download an FFmpeg build from ffmpeg.org, unzip it, and add its `bin`
+   folder to your PATH.
+3. Then, in Command Prompt or PowerShell:
+
+   ```
+   cd AllInOneSoundCloudArchiver
+   python -m venv venv
+   venv\Scripts\activate
+   pip install -r requirements.txt
+   python main.py
+   ```
 
 ## Features
 
@@ -69,7 +163,7 @@ your saved settings are copied over automatically on first launch.
 - **Per-artist subfolders** - optionally organize bulk downloads into a
   folder per artist.
 - **Custom filename pattern** - control how files are named using
-  `{artist}`, `{title}`, `{album}`, and `{track_no}`.
+  `{artist}`, `{title}`, `{album}`, and `{track_no}`
 - **Download log** - optionally write a `download_log.csv` recording what
   was downloaded, skipped, or failed, and when.
 - **Faster startup** - the SoundCloud client id is cached to disk after the
