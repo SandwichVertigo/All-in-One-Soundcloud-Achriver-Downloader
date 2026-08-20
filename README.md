@@ -26,36 +26,9 @@ using it.
 
 ## Screenshots
 
-<!--
-  Add your own screenshots here. The two common ways:
-
-  1. Local files in the repo (recommended): create a folder named
-     "screenshots" in the project root, put your .png/.jpg files in it,
-     then reference them with a relative path:
-
-       ![Download tab](screenshots/download-tab.png)
-
-  2. Hosted elsewhere: if an image is hosted online (e.g. uploaded to a
-     GitHub issue/release, or an image host), just use its direct URL:
-
-       ![Download tab](https://example.com/path/to/image.png)
-
-  Markdown image syntax is always: ![alt text](path-or-url)
-  The "alt text" in the brackets is shown if the image fails to load, and
-  is also read by screen readers, so keep it short and descriptive.
-
-  A few tips:
-  - Keep screenshots reasonably sized (crop out empty space) so the README
-    doesn't load slowly.
-  - PNG is usually best for UI screenshots (sharper text than JPG).
-  - You can control display width in GitHub-flavored markdown with HTML
-    instead of the ![]() shortcut, e.g.:
-      <img src="screenshots/download-tab.png" width="600">
--->
-
-![Download tab](screenshots/download-tab.png)
-![Search tab](screenshots/search-tab.png)
-![Settings tab](screenshots/settings-tab.png)
+![Download tab](1.png)
+![Search tab](2.png)
+![Settings tab](3.png)
 
 ## Setup
 
