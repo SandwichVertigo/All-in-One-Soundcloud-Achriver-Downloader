@@ -24,12 +24,6 @@ responsible for how you use this software. It is provided as-is, with no
 warranty, and the author is not liable for any misuse or consequences of
 using it.
 
-## Screenshots
-
-![Download tab](1.png)
-![Search tab](2.png)
-![Settings tab](3.png)
-
 ## Setup
 
 1. Install Python 3.10 or newer.
